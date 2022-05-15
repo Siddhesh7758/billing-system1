@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <div class="topbtn flex justify-end">
+        <div class="flex justify-end center-align mt-2 pr-4">
+            <button id="printbtn" style="width: 100px;" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+            Print
+            </button>
+        </div>
+
+        <div class="flex justify-end center-align mt-2 pr-4">
+            <button id="logoutbtn" style="width: 100px;" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+            Logout
+            </button>
+        </div>
+
+    </div>
+  
+    <h2 class="heading text-center mt-6">Billing System</h2>
+
+    <div class="container-fluid wrapper">
+
+    <div class="container leftside">
+        <div class="part1">
+            <fieldset>
+                <legend>Personal Information</legend>
+                Full Name: <input type="text" id="name"> <br>
+                Phone No: <input type="text" id="phoneno" maxlength="10" pattern="\d{10}" />
+            </fieldset>
+        </div>
+
+
+        <div class="part2">
+            <fieldset>
+                <legend>Your Orders</legend>
+                <div class="">
+                    <div>
+                    <label for="Item" class="mr-6">Item</label>  
+                    <!-- <input type="text" id="item">  -->
+                    
+                    <select id="selectItem">
+                        <option value=""></option>
+                        <option value="Samosa">Samosa</option>
+                        <option value="Pizza">Pizza</option>
+                        <option value="Burger">Burger</option>
+                    </select>
+
+                    </div>
+                    <div>
+                        <label for="Price" class="mr-5">Price</label>  
+                        <input type="text" id="price"><br/>
+                    </div>
+                    <div class="mt-2 mb-2">
+                        <label for="Quantity">Quantity</label> 
+                        <!-- <input type="text" id="quantity"><br/> -->
+                        <span id="minus" class="quantityspan ml-2 mr-4">-</span>
+                        <span id="countertext" class="quantityspan mr-4">1</span>
+                        <span id="plus" class="quantityspan">+</span>
+                    </div>
+                </div>
+
+                <button id="additem" style="width: 120px;" class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    Add Item
+                  </button>
+
+                  <!-- <button id="getdata" style="width: 120px;" class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    Get Items
+                  </button> -->
+
+            </fieldset>
+        </div>
+        
+    </div>
+
+    <div class="container rightside" id="billsection">
+        <fieldset>
+            <p class="text-xl font-bold">SSK Bills</p>
+            <p class="text-lg">Name:<span id="name2"></span></p>
+            <p class="text-lg">Phone No: <span id="phoneno2"> </span> </p>
+            <p>Bill Number:<span id="billno"> </span></p>
+            <p>Bill Date: <span id="date"> </span> </p>
+            
+
+            <table class="table-auto" id="table" class="table" border="1" >
+                <thead class="border-b bg-gray-800">
+                    <tr>    
+                        <th scope="col" class="text-md font-medium text-white px-6 py-4">Item</th>
+                        <th scope="col" class="text-md font-medium text-white px-6 py-4">Price</th>
+                        <th scope="col" class="text-md font-medium text-white px-6 py-4">Quantity</th>
+                        <th scope="col" class="text-md font-medium text-white px-6 py-4">Amount</th>
+                        <th scope="col" class="text-md font-medium text-white px-6 py-4">-</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+
+            </table>
+
+            </fieldset>
+            <div>
+                <p class="flex justify-end text-md mt-2">GST : 18%</p>
+                <p class="flex justify-end text-xl">Total Amount: <span id="amount"> </span></p>
+            </div>
+            <div class="flex justify-end">
+                <button id="submitBtn" style="width: 100px;" class="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+               Submit
+            </button>
+            </div>
+    </div>
+</div>
+
+<script type="module" src="./js/script1.js"></script>
+
+</body>
+</html>

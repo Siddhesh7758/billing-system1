@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+.heading{
+	font-size: 50px;
+}
+
+.container-fluid{
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+.container{
+	max-width: 500px;
+	width: 50%;
+	float: left;
+	margin: 0 auto;
+	border: none;
+	padding: 20px;
+}
+fieldset{
+	padding: 20px;
+	margin: 20px 0;
+	border: 1px solid #cccccc;
+	font-size: 16px;
+
+}
+legend{
+	margin-left: 20px;
+	font-size: 20px;
+}
+input{
+	width: auto;
+	margin: 10px;
+	padding: 5px;
+	font-size: 18px;
+	border: 1px solid black;
+	
+}
+
+#price{
+	width: 90px;
+}
+h3{
+	margin: 5px 0;
+}
+table{
+	width: 100%;
+	margin-top: 20px;
+	border: none;
+	text-align: center;
+}
+table td,table th{
+	padding: 5px;
+	margin: 0;
+	border: 1px solid #000000;
+}
+table tr td:last-child{
+	text-align: right;
+}
+/* h1{
+	text-align: right;
+} */
+ul li{
+	padding: 5px;
+	margin: 10px 0;
+}
+
+select{
+	border: 1px solid black;
+	padding: 6px;
+	border-radius: 4px;
+	margin-left: 8px;
+}
+
+.quantityspan{
+	background-color: rgb(227, 227, 227);
+	padding: 8px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+@media (min-width: 768px) { 
+	.container-fluid{
+		width: auto;
+		margin: auto;
+		max-width: 1000px;
+	}
+}
+
+@media (max-width: 576px) { 
+	.container-fluid{
+		width: auto;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		max-width: 1000px;
+	}
+
+	.rightside{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}	
+
+@media (max-width: 376px) {
+		.wrapper{
+			margin: 20px;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.heading{
+			font-size: 30px;
+		}
+		.part2{
+			margin: 0;
+			padding: 0;
+			width: 280px;
+		}
+		.rightside{
+			margin-right: 0;	
+			padding: 8px;
+		}
+		
+
+}
